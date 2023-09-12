@@ -3,21 +3,33 @@ const navToggle = document.querySelector(".mobile-nav-toggle");
 const primaryNav = document.querySelector(".primary-navigation");
 
 navToggle.addEventListener("click", () => {
-  primaryNav.hasAttribute("data-visible")
-    ? navToggle.setAttribute("aria-expanded", false)
-    : navToggle.setAttribute("aria-expanded", true);
-  primaryNav.toggleAttribute("data-visible");
-  primaryHeader.toggleAttribute("data-overlay");
+	// Check if the 'data-visible' attribute is present
+	if (primaryNav.hasAttribute("data-visible")) {
+		// Set 'aria-expanded' attribute to false
+		navToggle.setAttribute("aria-expanded", "false");
+		// Remove 'data-visible' attribute
+		primaryNav.removeAttribute("data-visible");
+		// Remove 'data-overlay' attribute
+		primaryHeader.removeAttribute("data-overlay");
+	} else {
+		// Set 'aria-expanded' attribute to true
+		navToggle.setAttribute("aria-expanded", "true");
+		// Add 'data-visible' attribute
+		primaryNav.setAttribute("data-visible", "true");
+		// Add 'data-overlay' attribute
+		primaryHeader.setAttribute("data-overlay", "true");
+	}
 });
 
+// Initialize A11YSlider
 const slider = new A11YSlider(document.querySelector(".slider"), {
-  adaptiveHeight: false,
-  dots: true,
-  centerMode: true,
-  arrows: false,
-  responsive: {
-    480: {
-      dots: false, // dots enabled 1280px and up
-    },
-  },
+	adaptiveHeight: false,
+	dots: true,
+	centerMode: true,
+	arrows: false,
+	responsive: {
+		480: {
+			dots: false, // dots enabled 1280px and up
+		},
+	},
 });
