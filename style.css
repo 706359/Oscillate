@@ -135,25 +135,31 @@ body {
 p:not([class]) {
 	/* opacity: 0.7; */
 	max-width: 70ch;
+	text-align: justify;
 }
 
 p[data-width="wide"] {
 	max-width: 100ch;
+	text-align: justify;
 }
+
 .servicesContainer {
 	display: flex;
 	flex-direction: column;
 	align-items: flex-end;
 	margin: 30px;
 }
+
 .flex {
 	display: flex;
 	align-items: center;
 }
+
 .service-image img {
 	transform: translateY(5%);
 	/* border: 1px solid red; */
 }
+
 ul .descriptionWeb {
 	width: 50%;
 	display: inline-flex;
@@ -173,11 +179,13 @@ ul .descriptionWeb {
 	min-width: 600px;
 	min-height: 176.5px;
 }
+
 .descriptionBoxWeb {
 	position: relative;
 	display: flex;
 	z-index: 100;
 }
+
 .descriptionBoxWeb span {
 	margin: 0;
 	height: 200%;
@@ -215,6 +223,7 @@ ul .descriptionApp {
 	min-width: 600px;
 	min-height: 176.5px;
 }
+
 .descriptionBoxApp {
 	position: relative;
 	display: flex;
@@ -222,6 +231,7 @@ ul .descriptionApp {
 	/* border: 1px solid red; */
 	justify-content: flex-end;
 }
+
 .descriptionBoxApp span {
 	margin: 0;
 	height: 200%;
@@ -259,11 +269,13 @@ ul .descriptionData {
 	min-width: 600px;
 	min-height: 176.5px;
 }
+
 .descriptionBoxData {
 	position: relative;
 	display: flex;
 	z-index: 100;
 }
+
 .descriptionBoxData span {
 	margin: 0;
 	height: 200%;
@@ -301,6 +313,7 @@ ul .descriptionDesk {
 	min-width: 600px;
 	min-height: 176.5px;
 }
+
 .descriptionBoxDesk {
 	position: relative;
 	display: flex;
@@ -308,6 +321,7 @@ ul .descriptionDesk {
 	/* border: 1px solid red; */
 	justify-content: flex-end;
 }
+
 .descriptionBoxDesk span {
 	margin: 0;
 	height: 200%;
@@ -365,7 +379,11 @@ ul .descriptionDesk {
 /* navigation */
 
 .primary-header {
-	padding-top: var(--size-700);
+	position: fixed;
+	top: 0;
+	background-color: white;
+	z-index: 25333;
+	width: 100vw;
 }
 
 .nav-wrapper {
@@ -554,6 +572,7 @@ input:where([type="text"], [type="email"], ) {
 	isolation: isolate;
 	text-align: center;
 }
+
 .containerContact {
 	display: flex;
 	justify-content: space-around;
@@ -561,10 +580,12 @@ input:where([type="text"], [type="email"], ) {
 	flex-wrap: wrap;
 	gap: 1rem;
 }
+
 .containerContact > div {
 	min-width: 30rem;
 	width: 35% !important;
 }
+
 @media (min-width: 50em) {
 	.cta {
 		text-align: left;
@@ -625,29 +646,30 @@ input:where([type="text"], [type="email"], ) {
 
 .webIconBox {
 	display: flex;
-	height: 6rem;
+	height: 5rem;
 	max-height: 6rem;
 	justify-content: center;
 }
+
 .webIconBox .webIcons {
 	display: flex;
 	position: absolute;
-	/* height: 100%; */
-	height: 105px;
+	height: 100px;
 	aspect-ratio: 1;
-	/* transform: translateY(50%); */
-	/* border: 1px solid red; */
 }
+
 .coreValue {
 	width: 150px !important;
 	aspect-ratio: 1;
 }
+
 .webIconBox .webIconflow {
 	margin: 0;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
+
 .numbered-items div::before {
 	content: "0" counter(count);
 	display: flex;
@@ -655,7 +677,7 @@ input:where([type="text"], [type="email"], ) {
 	color: transparent;
 	/* font-weight: var(--fw-bold); */
 	/* background-color: #459acf; */
-	padding: 0 var(--size-500);
+	padding: 0 var(--size-400);
 	/* border-radius: 100vw; */
 	/* grid-row: 1 / 2;
 	grid-column: 1 / 2; */
@@ -702,6 +724,7 @@ input:where([type="text"], [type="email"], ) {
 	.a11y-slider-container {
 		margin-inline: 0;
 	}
+
 	.slider > * {
 		width: 50%;
 	}
@@ -726,12 +749,14 @@ input:where([type="text"], [type="email"], ) {
 	margin-inline: auto;
 	border-radius: 50%;
 }
+
 .a11y-slider-dots {
 	display: flex;
 	justify-content: center;
 	margin-block: var(--size-500);
 	gap: var(--size-300);
 }
+
 .a11y-slider-dots li {
 	display: block;
 	width: 12px;
@@ -764,7 +789,8 @@ input:where([type="text"], [type="email"], ) {
 	margin: -1px;
 	overflow: hidden;
 	clip: rect(0, 0, 0, 0);
-	white-space: nowrap; /* added line */
+	white-space: nowrap;
+	/* added line */
 	border: 0;
 }
 
@@ -828,15 +854,19 @@ input:where([type="text"], [type="email"], ) {
 .text-primary-400 {
 	color: var(--clr-primary-400);
 }
+
 .text-accent-400 {
 	color: var(--clr-accent-400);
 }
+
 .text-accent-100 {
 	color: var(--clr-accent-100);
 }
+
 .text-neutral-100 {
 	color: var(--clr-neutral-100);
 }
+
 .text-neutral-900 {
 	color: var(--clr-neutral-900);
 }
@@ -844,15 +874,19 @@ input:where([type="text"], [type="email"], ) {
 .bg-primary-400 {
 	background-color: var(--clr-primary-400);
 }
+
 .bg-accent-400 {
 	background-color: var(--clr-accent-400);
 }
+
 .bg-accent-100 {
 	background-color: var(--clr-accent-100);
 }
+
 .bg-neutral-100 {
 	background-color: var(--clr-neutral-100);
 }
+
 .bg-neutral-900 {
 	background-color: var(--clr-neutral-900);
 }
@@ -860,9 +894,11 @@ input:where([type="text"], [type="email"], ) {
 .fw-bold {
 	font-weight: var(--fw-bold);
 }
+
 .fw-semi-bold {
 	font-weight: var(--fw-semi-bold);
 }
+
 .fw-regular {
 	font-weight: var(--fw-regular);
 }
@@ -871,32 +907,40 @@ input:where([type="text"], [type="email"], ) {
 	font-size: var(--fs-primary-heading);
 	line-height: 1.1;
 }
+
 .fs-secondary-heading {
 	font-size: var(--fs-secondary-heading);
 	line-height: 1.1;
 }
+
 .fs-sub-heading {
 	font-size: var(--fs-sub-heading);
 	line-height: 1.1;
 }
+
 .clickable {
 	font-size: var(--fs-sub-heading);
 	line-height: 1.1;
 	transition: all 0.02s ease-in;
 }
+
 .clickable:hover {
 	border-bottom: 1px solid var(--clr-accent-500);
 	transform: scale(1.09);
 }
+
 .fs-300 {
 	font-size: var(--fs-300);
 }
+
 .fs-400 {
 	font-size: var(--fs-400);
 }
+
 .fs-500 {
 	font-size: var(--fs-500);
 }
+
 .fs-600 {
 	font-size: var(--fs-600);
 }
@@ -904,9 +948,11 @@ input:where([type="text"], [type="email"], ) {
 .padding-block-900 {
 	padding-block: var(--size-900);
 }
+
 .padding-block-1000 {
 	padding-block: var(--size-1000);
 }
+
 .padding-block-700 {
 	padding-block: var(--size-700);
 }
@@ -924,6 +970,7 @@ input:where([type="text"], [type="email"], ) {
 		display: inline-flex;
 	}
 }
+
 /* quote form */
 
 .containerForm {
@@ -934,6 +981,7 @@ input:where([type="text"], [type="email"], ) {
 	justify-content: center;
 	align-items: center;
 }
+
 .containerForm > input {
 	width: 90%;
 	margin: 0.5rem;
@@ -943,6 +991,7 @@ input:where([type="text"], [type="email"], ) {
 	border-radius: 5px;
 	flex: 1;
 }
+
 .containerForm > textarea {
 	width: 90%;
 	margin: 0.5rem;
@@ -952,6 +1001,7 @@ input:where([type="text"], [type="email"], ) {
 	border-radius: 5px;
 	flex: 1;
 }
+
 /* AnimatedName */
 .animate-charcter {
 	background-image: linear-gradient(-45deg, var(--clr-accent-500) 0%, var(--clr-accent-500) 29%, var(--clr-accent-300) 67%, var(--clr-primary-400) 100%);
@@ -976,18 +1026,22 @@ input:where([type="text"], [type="email"], ) {
 .anim-typewriter {
 	animation: typewriter 4s steps(44) 1s 1 normal both, blinkTextCursor 500ms steps(44) infinite normal;
 }
+
 @keyframes typewriter {
 	from {
 		width: 0%;
 	}
+
 	to {
 		width: 81%;
 	}
 }
+
 @keyframes blinkTextCursor {
 	from {
 		border-right-color: rgba(60, 247, 3, 0.932);
 	}
+
 	to {
 		border-right-color: transparent;
 	}
@@ -999,19 +1053,22 @@ input:where([type="text"], [type="email"], ) {
 	display: flex;
 	justify-content: center;
 }
+
 .containerExpert {
+	/* left: 5%; */
 	position: relative;
 	width: 600px;
 	height: 600px;
 	border-radius: 50%;
-	background: #f1f0f0;
+	/* background: #f1f0f0; */
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	border: 5px solid var(--clr-accent-500);
+	border: 3px dotted var(--clr-accent-500);
 }
+
 .containerExpert .icon {
-	left: -10%;
+	left: -8%;
 	position: relative;
 	width: 100%;
 	height: 100%;
@@ -1022,14 +1079,14 @@ input:where([type="text"], [type="email"], ) {
 
 .containerExpert .icon .imgBx {
 	position: absolute;
-	width: 100px;
-	height: 100px;
+	width: 80px;
+	height: 80px;
 	border-radius: 50%;
 	transition: 0.5s;
 	border: 2px solid #fff;
 	box-shadow: 0 0 0 4px var(--clr-accent-300), 0 0 0 6px var(--clr-accent-100);
 	transform: rotate(calc(360deg / 6 * var(--i)));
-	transform-origin: 360px;
+	transform-origin: 340px;
 	z-index: 100;
 	overflow: hidden;
 }
@@ -1062,61 +1119,69 @@ input:where([type="text"], [type="email"], ) {
 	align-items: center;
 	justify-content: center;
 }
+
 .content::before {
 	content: "";
 	position: absolute;
 	inset: 20px;
-	border: 4px solid transparent;
-	border-left: 4px solid red;
-	border-right: 4px solid rgb(194, 194, 3);
+	border: 2px solid transparent;
+	border-left: 2px solid red;
+	border-right: 2px solid rgb(194, 194, 3);
 	border-radius: 50%;
 	animation: animate_01 6s linear infinite;
 	z-index: 1;
 	pointer-events: none;
 }
+
 @keyframes animate_01 {
 	0% {
 		rotate: 0deg;
 	}
+
 	100% {
 		rotate: 360deg;
 	}
 }
+
 .content::after {
 	content: "";
 	position: absolute;
 	inset: 40px;
-	border: 4px solid transparent;
-	border-left: 4px solid var(--clr-accent-400);
-	border-right: 4px solid rgb(4, 248, 228);
+	border: 2px solid transparent;
+	border-left: 2px solid var(--clr-accent-400);
+	border-right: 2px solid rgb(4, 248, 228);
 	border-radius: 50%;
 	animation: animate_02 6s linear infinite;
 	z-index: 1;
 	pointer-events: none;
 }
+
 @keyframes animate_02 {
 	0% {
 		rotate: 360deg;
 	}
+
 	100% {
 		rotate: 0deg;
 	}
 }
+
 .contentBx {
 	position: absolute;
 	transform: scale(0);
-	transform: 0.5s;
+	transition: 0.5s ease-in-out;
 	opacity: 0;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
+
 .contentBx.active {
 	transform: scale(1);
 	opacity: 1;
-
 	transition-delay: 0.5s;
 }
+
 .contentBx .card {
 	position: relative;
 	display: flex;
@@ -1125,6 +1190,7 @@ input:where([type="text"], [type="email"], ) {
 	flex-direction: column;
 	gap: 15px;
 }
+
 .contentBx .card .imgBx {
 	position: relative;
 	width: 300px;
@@ -1132,6 +1198,7 @@ input:where([type="text"], [type="email"], ) {
 	border-radius: 10%;
 	overflow: hidden;
 }
+
 .contentBx .card .imgBx img {
 	position: absolute;
 	top: 0;
@@ -1140,12 +1207,14 @@ input:where([type="text"], [type="email"], ) {
 	height: 100%;
 	object-fit: cover;
 }
+
 .content .card .textBx {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
 }
+
 .content .card .textBx h2 {
 	position: relative;
 	font-size: 1.5em;
@@ -1154,6 +1223,7 @@ input:where([type="text"], [type="email"], ) {
 	line-height: 1.5em;
 	text-align: center;
 }
+
 .content .card .textBx h2 span {
 	font-size: 0.8em;
 	color: var(--clr-primary-400);

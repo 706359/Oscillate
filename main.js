@@ -1,3 +1,20 @@
+let imgBx = document.querySelectorAll(".imgBx");
+let contentBx = document.querySelectorAll(".contentBx");
+
+for (let i = 0; i < imgBx.length; i++) {
+	imgBx[i].addEventListener("mouseover", function () {
+		for (let i = 0; i < contentBx.length; i++) {
+			contentBx[i].className = "contentBx";
+		}
+		document.getElementById(this.dataset.id).className = "contentBx active";
+
+		for (let i = 0; i < imgBx.length; i++) {
+			imgBx[i].className = "imgBx";
+		}
+		this.className = "imgBx active";
+	});
+}
+
 const primaryHeader = document.querySelector(".primary-header");
 const navToggle = document.querySelector(".mobile-nav-toggle");
 const primaryNav = document.querySelector(".primary-navigation");
@@ -33,20 +50,3 @@ const slider = new A11YSlider(document.querySelector(".slider"), {
 		},
 	},
 });
-
-let imgBx = document.querySelectorAll(".imgBx");
-let contentBx = document.querySelectorAll(".contentBx");
-
-for (let i = 0; i < imgBx.length; i++) {
-	imgBx[i].addEventListener("mouseover", function () {
-		for (let i = 0; i < contentBx.length; i++) {
-			contentBx[i].className = "contentBx";
-		}
-		document.getElementById(this.dataset.id).className = "contentBx active";
-
-		for (let i = 0; i < imgBx.length; i++) {
-			imgBx[i].className = "imgBx";
-		}
-		this.className = "imgBx active";
-	});
-}
