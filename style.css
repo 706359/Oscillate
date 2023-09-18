@@ -10,7 +10,7 @@
 	--clr-neutral-200: hsl(0 0% 97%);
 	--clr-neutral-100: hsl(0 0% 100%);
 
-	--ff-primary: "Quicksand", sans-serif;
+	--ff-primary: "Work Sans", sans-serif;
 
 	--ff-body: var(--ff-primary);
 	--ff-heading: var(--ff-primary);
@@ -81,7 +81,7 @@ ol[role="list"] {
 
 /* Set core root defaults */
 html:focus-within {
-	scroll-behavior: auto;
+	scroll-behavior: smooth;
 }
 
 html,
@@ -111,7 +111,7 @@ svg {
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
 	html:focus-within {
-		scroll-behavior: auto;
+		scroll-behavior: smooth;
 	}
 
 	*,
@@ -156,9 +156,12 @@ p[data-width="wide"] {
 }
 
 .service-image img {
-	/* transform: translateY(5%); */
+	transform: translateY(5%);
 	/* border: 1px solid red; */
 	justify-content: center;
+	max-width: 700px;
+	height: auto;
+	border-radius: 100vmax;
 }
 
 ul .descriptionWeb {
@@ -801,7 +804,7 @@ input:where([type="text"], [type="email"], ) {
 
 .container {
 	/* --max-width: 1110px; */
-	--max-width: 1350px;
+	--max-width: 1450px;
 	--container-padding: 1rem;
 	/* border: 1px solid red; */
 	width: min(var(--max-width), 100% - (var(--container-padding) * 2));
@@ -1237,7 +1240,7 @@ input:where([type="text"], [type="email"], ) {
 	text-shadow: 2px 2px 10px var(--clr-accent-200);
 	transition: all 0.5s ease-in-out;
 	text-align: center;
-
+	margin: 15px;
 	animation: flicker 0.5s ease-in-out infinite alternate;
 
 	&:hover {
